@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+        {% for key in data[0] %}
+        <th>{{key}}</th>
+        {% endfor %}
+        {% for record in data %}
+        <tr>
+            {% for key, value in record.items() %}
+            <td> {{value}} </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </thead>
+
+    
+    
+
+</table>
+<footer>
+    S&E = science and engineering. <br>
+    * = suppressed when population estimate < 500. <br>
+    D = suppressed to avoid disclosure of confidential information. <br>
+    S = suppressed for reliability; coefficient of variation exceeds publication standards.
+</footer>
+{% endblock content %}
