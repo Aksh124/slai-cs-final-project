@@ -4,21 +4,10 @@
     <title>College Majors</title>
 </head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
 <body>
     {% block content %}
-    <h1 style="text-align: center;">Find salaries by college major and other factors</h1>
-    <form action="/table">
-        <section>
-            <label for="college_major">Find College Major</label><br>
-            <input type="text" id="college_major">
-            <input type="submit" id="college_major">
-        </section>
-    </form>
-    
-    <h1 class="main_heading">Welcome to this website</h1>
     {% endblock content %}
 </body>
 

@@ -1,0 +1,26 @@
+{extends "base.html"}
+{% block content %}
+
+<table class="table">
+    <thead>
+        {% for key in data[0] %}
+        <th>{{key}}</th>
+        {% endfor %}
+    </thead>
+    {% for dict in data %}
+    {% for record in dict %}
+    <tbody>
+        <tr>
+            {% for value in record.values() %}
+            {% if %}
+            <td>{{value}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+
+
+
+
+{endblock content %}

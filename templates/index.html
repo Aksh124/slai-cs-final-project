@@ -1,3 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+    <h1 style="text-align: center;">Main Page</h1>
+    <div class="box">
+    <form method="post" action="/table"> <!-- fix form action-->
+        <section>
+            <label for="college_major">Find College Major</label><br>
+            <input type="text" id="college_major">
+            <input type="submit" id="college_major">
+        </section>
+    </form>
+    </div>  
+    
+    <h1 class="main_heading">Welcome to this website</h1>
+
+
 {% endblock content %}
