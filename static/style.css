@@ -1,0 +1,16 @@
+.main_heading {
+    text-align: center;
+    color: black;
+}
+
+.heading {
+    text-align: center;
+    padding: 10px;
+}
+
+.bulma_sucks {
+    text-align: right;
+    padding: 20px;
+    background-color: dodgerblue;
+    /* dodger blue best color oat*/
+}

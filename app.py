@@ -1,5 +1,5 @@
 from os import abort
-from flask import app, Flask, render_template, current_app
+from flask import app, Flask, render_template, current_app, abort
 from logic import read_csv
 
 app = Flask(__name__)
@@ -19,11 +19,11 @@ def submit_form():
     return render_template("", data=data)
 '''
 
-@app.route("/<string:major_name>")
+@app.post("/<string:major_name>")
 def college_by_name(major_name: str):
-    data2 = [ record for record in data if record["Level and field of highest degree"] == major_name]
+    data2 = [ record for record in data if record["Level and Field of Highest Degree"] == major_name]
     if data2:
-        return data2
+        return render_template("table_view.html", data = data2)
     abort(404)
 
 #@app.route("/college_majors")
