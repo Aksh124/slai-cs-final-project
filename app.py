@@ -21,9 +21,9 @@ def submit_form():
 
 @app.post("/<string:major_name>")
 def college_by_name(major_name: str):
-    data2 = [ record for record in data if record["Level and Field of Highest Degree"] == major_name]
+    data2 = [record for record in data if record["Level and Field of Highest Degree"] == major_name]
     if data2:
-        return render_template("table_view.html", data = data2)
+        return render_template("table_view.html", data=data2)
     abort(404)
 
 #@app.route("/college_majors")

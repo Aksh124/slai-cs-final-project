@@ -1,32 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-        <nav class="bulma_sucks">
-        <a href="">Hello</a>
-        </nav>
+    <nav class="bulma_sucks">
+        <a href="" class="main_page_tag">Main Page</a>
+    </nav>
     <div class="heading">
     <br>
     <h1 class="tag is-large">Main Page</h1>
     </div><br>
-    <div class="box">
-    
     
     </div>
-    <div class="box">
-    <form method="get" class="main_heading"> <!----> <!--<---------- FIX THIS OHPRWEHGIHEPGIHQEPIH-->
+    <div class="box">   
+    <form method="post" class="main_heading"> <!----> <!--<---------- FIX THIS -->
         <section>
-            <label for="college_major">Find College Major</label><br><br>
-            Enter Major: <input list = "college_majors" type="text" name="college_major" id="college_major" placeholder="Computer Science">
+            <label for="college_major" style="font-size: 32px;">Find College Major</label><br><br>
+
+            <h3 class="major">Enter Major:</h3> <input list = "college_majors" type="text" name="college_major" id="college_major" placeholder="Computer Science">
             <datalist id="college_majors">
                 {% for record in data %}
                 <option value = "{{record['Level and Field of Highest Degree']}}"> 
                     {% endfor %}
                 </datalist>
+                <br>
             <input type="submit" id="college_major" value="Search">
         </section>
     </form>
     </div>
+
+    <div class="box">
+        <div class="column is-half">
+        <section class="section">
+            <h1 class="title">About this application</h1>
+            <p class="subtitle">This is a comprehensive application allowing prospective college students, workers, and others find critical information about their futures by allowing them to sort fields based on factors such as salaries, level of education, and more! We are better than the competitors because there aren't any!<br><br></p> 
+
+            <p>Here is the main source used for this project:</p>
+            <a href="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">
+                <blockquote cite="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">The NSCG is a biennial survey that provides data on the characteristics of the nation's college graduates, with a focus on those in the science and engineering workforce.</blockquote>
+            </a>
+            
+        </section>
+
+        <div class="column is-half">
+                <h1 class="title">Hi</h1>
+        </div>
+    </div>
+
     
-    <h1 class="main_heading">Welcome to this website</h1>
     
 
     

@@ -9,8 +9,50 @@
 }
 
 .bulma_sucks {
-    text-align: right;
+    text-align: left;
     padding: 20px;
     background-color: dodgerblue;
     /* dodger blue best color oat*/
+}
+
+.main_page_tag{
+    color: black;
+    border: 2px solid;
+    padding: 5px;
+    background-color: blanchedalmond; /*easter egg*/
+}
+
+a:link {
+  color: brown;
+}
+
+.section{
+    text-align: center;
+    border-style: dotted;
+}
+
+input[type=text], select {
+  width: 10%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+}
+
+.major {
+    text-align: center;
+}
+
+
+input[type=submit], select {
+    width: 10%;
+    margin-top: 6px;
+    padding: 5px 50px;
+    border: 1px solid #ccc;
+    border: none;
+    border-radius: 4px;
+    background-color: dodgerblue;
+    cursor: pointer;
+}   
+
+input[type=submit]:hover {
+    background-color: lightblue;
 }
