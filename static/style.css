@@ -7,28 +7,41 @@
     text-align: center;
     padding: 10px;
 }
-
+/*NAVBAR CLASSES*/
 .bulma_sucks {
     text-align: left;
     padding: 20px;
     background-color: dodgerblue;
     /* dodger blue best color oat*/
+    /* fr fr*/
+    position: sticky;
+    overflow: hidden;
+    top: 0;
 }
 
+.bulma_sucks a:hover{
+    background-color: lightgray
+}
+
+.bulma_sucks a:active{
+    background-color: dodgerblue;
+}
+
+/*end NAVBAR CLASSES*/
 .main_page_tag{
     color: black;
     border: 2px solid;
     padding: 5px;
-    background-color: blanchedalmond; /*easter egg*/
+    background-color: white; /*easter egg*/
+    border-radius: 5px;
+}
+
+.main_page_tag2{
+    margin-left:10px;
 }
 
 a:link {
-  color: brown;
-}
-
-.section{
-    text-align: center;
-    border-style: dotted;
+  color: dodgerblue;
 }
 
 input[type=text], select {
@@ -59,4 +72,25 @@ input[type=submit]:hover {
 
 input[type=submit]:active {
     background-color: skyblue;
+}
+
+.options{
+    max-height: 75px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section_one{
+    border: dashed;
+    padding: 10px;
+    text-align: center;
+}
+
+.section_two{
+    padding: 10px;
+    border: dashed;
+}
+
+.section_three{
+    background-color: dodgerblue;
 }
