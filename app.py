@@ -23,9 +23,13 @@ def submit_form():
 @app.post("/")
 def college_by_name():
     data2 = [record for record in data if record["Level and Field of Highest Degree"] == request.form["college_major"]]
-    if request.form["college_major"] not in data2:
-        return render_template("abort.html")
-    return render_template("table_view.html", data=(data2))
+    if data2:
+        return render_template("table_view.html", data=(data2), major_name=request.form["college_major"])
+    return render_template("abort.html")
+
+@app.route("/<string:random>")
+def random_abort(random):
+    return render_template("abort.html")
 
 #@app.route("/college_majors")
 #def return_majors():
