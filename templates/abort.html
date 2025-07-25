@@ -1,19 +1,14 @@
 {%extends "base.html"%}
 {%block content%}
 <style>
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1200px;
-  border: 1px solid black;
+
+.center_image{
+  margin-left:auto;
+  margin-right:auto;
+  width: 100%;
 }
 
-img {
-  width: 50%;
-  height: 100%;
-}
 </style>
 
-<div><img src="static/abort404.jpeg" style="float:left;width:100%;height:50%;"></div>
+<div><img src="static/abort404.jpeg" class="center_image"></div>
 {%endblock content%}

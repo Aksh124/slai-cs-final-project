@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<table class="table">
+<section>
+<br>
+{% if major_name %}
+<h1 class="title" style="text-align: center;">Table for {{major_name}}</h1>
+{% else %}
+<h1 class="title" style="text-align: center;">Table for All Majors</h1>
+{%endif%}
+<table class="table" style="border-style:dotted; margin-right: auto; margin-left: auto;">
     <thead>
         {% for key in data[0] %}
         <th>{{key}}</th>
         {% endfor %}
         {% for record in data %}
+        
         <tr>
             {% for key, value in record.items() %}
             <td> {{value}} </td>
@@ -13,15 +21,18 @@
         </tr>
         {% endfor %}
     </thead>
+</table>
 
     
     
 
 </table>
-<footer>
+<footer style="text-align: center;">
     S&E = science and engineering. <br>
     * = suppressed when population estimate < 500. <br>
     D = suppressed to avoid disclosure of confidential information. <br>
     S = suppressed for reliability; coefficient of variation exceeds publication standards.
 </footer>
+
+</section>
 {% endblock content %}
