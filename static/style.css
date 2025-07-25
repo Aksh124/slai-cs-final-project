@@ -56,3 +56,7 @@ input[type=submit], select {
 input[type=submit]:hover {
     background-color: lightblue;
 }
+
+input[type=submit]:active {
+    background-color: skyblue;
+}

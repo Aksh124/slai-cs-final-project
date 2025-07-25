@@ -1,23 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-    <nav class="bulma_sucks">
-        <a href="" class="main_page_tag">Main Page</a>
-    </nav>
     <div class="heading">
     <br>
-    <h1 class="tag is-large">Main Page</h1>
     </div><br>
     
     </div>
-    <div class="box">   
+    <div class="box" class = "box_heading">   
     <form method="post" class="main_heading"> <!----> <!--<---------- FIX THIS -->
         <section>
             <label for="college_major" style="font-size: 32px;">Find College Major</label><br><br>
 
             <h3 class="major">Enter Major:</h3> <input list = "college_majors" type="text" name="college_major" id="college_major" placeholder="Computer Science">
             <datalist id="college_majors">
-                {% for record in data %}
-                <option value = "{{record['Level and Field of Highest Degree']}}"> 
+                {% for record in majors %}
+                <option value = "{{record}}"> </option>
                     {% endfor %}
                 </datalist>
                 <br>

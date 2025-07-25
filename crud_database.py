@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Working with SQLite3"""
-
 import csv
 from functools import cache
 import logging
@@ -20,9 +17,9 @@ def create(db_name: str, datafile: str) -> None:
         with open(datafile, "r") as input_file:
             data = csv.DictReader(input_file)
             cur = connection.cursor()
-            cur.execute("DROP TABLE IF EXISTS animal;")
+            cur.execute("DROP TABLE IF EXISTS major_names;")
             cur.execute(
-                "CREATE table animal ("
+                "CREATE table major_names ("
                 + "id integer primary key,"
                 + "name,"
                 + "age integer,"
@@ -31,13 +28,13 @@ def create(db_name: str, datafile: str) -> None:
                 + ");"
             )
             cur.executemany(
-                "INSERT INTO animal values(?, ?, ?, ?, ?);", (tuple(ani.values()) for ani in data)
+                "INSERT INTO major_names values(?, ?, ?, ?, ?);", (tuple(ani.values()) for ani in data)
             )
 
 
 @click.command(help="Read all records from the specified table")
 @click.argument("db_name")
-@click.option("--table", "-t", default="animal")
+@click.option("--table", "-t", default="major_names")
 @cache
 def read(db_name: str, table: str) -> None | list[Any]:
     """Read all records"""
@@ -51,7 +48,7 @@ def read(db_name: str, table: str) -> None | list[Any]:
 
 @click.command()
 @click.argument("db_name")
-@click.option("--table", "-t", default="animal")
+@click.option("--table", "-t", default="major_names")
 @click.option("--location", "-l", default="", help="Location to read")
 @click.option("--species", "-s", default="", help="Species to read")
 def query(db_name: str, table: str, species: str, location: str) -> None:
@@ -61,19 +58,19 @@ def query(db_name: str, table: str, species: str, location: str) -> None:
 
 @click.command()
 @click.argument("db_name")
-@click.option("--table", "-t", default="animal")
-@click.option("--animal", "-a", help="Animal to update", type=int, default=0)
-def update(db_name: str, table: str, animal: int) -> None:
+@click.option("--table", "-t", default="major_names")
+@click.option("--major_names", "-a", help="major_names to update", type=int, default=0)
+def update(db_name: str, table: str, major_names: int) -> None:
     """Update records"""
     print("UPDATE")
 
 
 @click.command()
 @click.argument("db_name")
-@click.option("--table", "-t", default="animal")
-@click.option("--animal", "-a", help="Animal to update", type=int, default=0)
+@click.option("--table", "-t", default="major_names")
+@click.option("--major_names", "-a", help="major_names to update", type=int, default=0)
 @click.option("--species", "-s", default="", help="Species to delete")
-def delete(db_name: str, table: str, animal: int, species: str) -> None:
+def delete(db_name: str, table: str, major_names: int, species: str) -> None:
     """Delete records"""
     print("DELETE")
 
