@@ -6,12 +6,12 @@
     
     </div>
     <div class="box" class = "box_heading">   
-    <form method="post" class="main_heading"> <!----> <!--<---------- FIX THIS -->
+    <form method="post" class="main_heading">
         <section>
             <label for="college_major" style="font-size: 32px;">Find College Major</label><br><br>
 
             <h3 class="major">Enter Major:</h3> <input list = "college_majors" type="text" name="college_major" id="college_major" placeholder="Computer Science">
-            <datalist id="college_majors">
+            <datalist id="college_majors" >
                 {% for record in majors %}
                 <option value = "{{record}}"> </option>
                     {% endfor %}
@@ -23,24 +23,26 @@
     </div>
 
     <div class="box">
-        <div class="column is-half">
-        <section class="section">
-            <h1 class="title">About this application</h1>
-            <p class="subtitle">This is a comprehensive application allowing prospective college students, workers, and others find critical information about their futures by allowing them to sort fields based on factors such as salaries, level of education, and more! We are better than the competitors because there aren't any!<br><br></p> 
+        <div class="columns is multiline"
+            <div class="column is-half">
+            <section class="section">
+                <h1 class="title">About this application</h1>
+                <p class="subtitle">This is a comprehensive application allowing prospective college students, workers, and others find critical information about their futures by allowing them to sort fields based on factors such as salaries, level of education, and more! We are better than the competitors because there aren't any!<br><br></p> 
 
-            <p>Here is the main source used for this project:</p>
-            <a href="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">
-                <blockquote cite="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">The NSCG is a biennial survey that provides data on the characteristics of the nation's college graduates, with a focus on those in the science and engineering workforce.</blockquote>
-            </a>
+                <p>Here is the main source used for this project:</p>
+                <a href="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">
+                    <blockquote cite="https://ncses.nsf.gov/surveys/national-survey-college-graduates/2023#data">The NSCG is a biennial survey that provides data on the characteristics of the nation's college graduates, with a focus on those in the science and engineering workforce.</blockquote>
+                </a>
+            </section>
+            <div class="column is-half" style="border: dashed; margin-left: 10px;">
+                <h1 class="title" style="text-align: center;">Guide: How to use this application</h1>
+                <p class="subtitle" style="text-align: center;">Simply enter in a major into the box. You will soon be able to add other factors, such as salary. Then, click the search box and you will see results. Enjoy! </p>
+            </div>
             
-        </section>
-
-        <div class="column is-half">
-                <h1 class="title">Hi</h1>
         </div>
     </div>
 
-    
+    <img src="static/job.jpg">
     
 
     
