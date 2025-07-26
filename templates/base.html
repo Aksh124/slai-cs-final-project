@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
+<!--
+    <nav class="bulma_sucks">
+            <a href="/" class="main_page_tag">Main Page</a>
+            <a href="/table" class="main_page_tag main_page_tag2">All Majors</a>
+    </nav>
+-->
 
-<nav class="bulma_sucks">
-        <a href="/" class="main_page_tag">Main Page</a>
-        <a href="/table" class="main_page_tag main_page_tag2">All Majors</a>
+<input type="checkbox" id="sidebar-toggle" hidden>
+
+<label for="sidebar-toggle" class="sidebar-button">&#9776;</label>
+
+<nav class="sidebar">
+  <ul>
+    <li><a href="/">Main Page</a></li>
+    <li><a href="/table">All Majors</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </nav>
 
 <head>
     <title>College Majors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">

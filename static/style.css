@@ -5,7 +5,6 @@
 
 .heading {
     text-align: center;
-    padding: 10px;
 }
 /*NAVBAR CLASSES*/
 .bulma_sucks {
@@ -94,3 +93,68 @@ input[type=submit]:active {
 .section_three{
     background-color: dodgerblue;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e0eafc);
+  color: #333;
+}
+
+
+
+/* note to other dev, made a sidebar (googled most of it) made these comments tho*/
+
+/* original pos*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: dodgerblue;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.6s ease;
+  z-index: 1000;
+}
+
+/* style the unorderedlist items in the sidebar */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* style the list items in the sidebar */
+.sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* style the links in the sidebar */
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* hamburger icon */
+.sidebar-button {
+  font-size: 26px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  display: inline-block;
+  z-index: 1100;
+  position: sticky;
+  top: 0;
+}
+
+/* Checkbox checked state (show sidebar) */
+#sidebar-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+
+
+
